@@ -1,0 +1,164 @@
+:root {
+  --texture-size: 6000px;
+  --fluid-texture-size: 400vw;
+  --ring-radius-ratio: 6;
+  --minimum-scale: 0.5;
+  --ring-radius: calc(var(--texture-size) / var(--ring-radius-ratio));
+  --slice-width: calc(0.4 * var(--texture-size));
+  --slice-height: calc(0.45638 * var(--slice-width));
+  --temp-scaled-texture-size: min(
+    var(--texture-size),
+    max(
+      calc(var(--texture-size) * var(--minimum-scale)),
+      var(--fluid-texture-size)
+    )
+  );
+  --scaled-texture-size: calc(
+    var(--texture-multiplier) * var(--temp-scaled-texture-size)
+  );
+  --scaled-ring-radius: min(
+    var(--ring-radius),
+    max(
+      calc(var(--ring-radius) * var(--minimum-scale)),
+      calc(var(--fluid-texture-size) / var(--ring-radius-ratio))
+    )
+  );
+  --texture-margin: calc(
+    -1 * (var(--slice-width) + var(--scaled-ring-radius) * 2)
+  );
+  --texture-multiplier: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  position: fixed;
+  top: 0px;
+}
+
+.kaleidoscope-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  will-change: contents;
+}
+
+.kaleidoscope-slice {
+  width: var(--slice-width);
+  height: var(--slice-height);
+  transform-origin: 0px 50%;
+  position: absolute;
+  clip-path: polygon(-0.15% 50%, 100% 0%, 100% 100%);
+  top: calc(50% - var(--slice-height) / 2);
+  left: 50%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  /* style */
+}
+.kaleidoscope-slice__size {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  background-size: contain;
+  min-width: var(--scaled-texture-size);
+  min-height: var(--scaled-texture-size);
+  max-width: var(--scaled-texture-size);
+  max-height: var(--scaled-texture-size);
+  transform-origin: 50% 50%;
+  background-position: 50% 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-left: var(--texture-margin);
+  animation: 5000ms ease-in-out 0s infinite alternate-reverse none running
+    dthLEC;
+}
+.kaleidoscope-bg {
+  background-image: url(../Assets/Kaleidoscope.png);
+}
+.scroll-container {
+  height: 70000px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.slice:nth-child(1) {
+  transform: rotate(0rad) scaleY(1);
+}
+.slice:nth-child(2) {
+  transform: rotate(0.4487989505128276rad) scaleY(-1);
+}
+.slice:nth-child(3) {
+  transform: rotate(0.8975979010256552rad) scaleY(1);
+}
+.slice:nth-child(4) {
+  transform: rotate(1.3463968515384828rad) scaleY(-1);
+}
+.slice:nth-child(5) {
+  transform: rotate(1.7951958020513104rad) scaleY(1);
+}
+.slice:nth-child(6) {
+  transform: rotate(2.243994752564138rad) scaleY(-1);
+}
+.slice:nth-child(7) {
+  transform: rotate(2.6927937030769655rad) scaleY(1);
+}
+.slice:nth-child(8) {
+  transform: rotate(3.141592653589793rad) scaleY(-1);
+}
+.slice:nth-child(9) {
+  transform: rotate(3.5903916041026207rad) scaleY(1);
+}
+.slice:nth-child(10) {
+  transform: rotate(4.039190554615448rad) scaleY(-1);
+}
+.slice:nth-child(11) {
+  transform: rotate(4.487989505128276rad) scaleY(1);
+}
+.slice:nth-child(12) {
+  transform: rotate(4.9367884556411035rad) scaleY(-1);
+}
+.slice:nth-child(13) {
+  transform: rotate(5.385587406153931rad) scaleY(1);
+}
+.slice:nth-child(14) {
+  transform: rotate(5.834386356666759rad) scaleY(-1);
+}
+@-webkit-keyframes dthLEC {
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  100% {
+    -webkit-transform-origin: 49.9% 49.9%;
+    -ms-transform-origin: 49.9% 49.9%;
+    transform-origin: 49.9% 49.9%;
+  }
+} /*!sc*/
+@keyframes dthLEC {
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  100% {
+    -webkit-transform-origin: 49.9% 49.9%;
+    -ms-transform-origin: 49.9% 49.9%;
+    transform-origin: 49.9% 49.9%;
+  }
+}

@@ -1,0 +1,39 @@
+@import './Background';
+@import './Hero';
+@import './Kaleidoscope';
+@import './Main';
+@import './Navbar';
+@import './Sound';
+
+@font-face {
+  font-family: 'Bantayog-Regular';
+  src: url('../Assets/Fonts/Bantayog/Bantayog-Regular.woff') format('woff'),
+    url('../Assets/Fonts/Bantayog/Bantayog-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Baybayin-Regular';
+  src: url('../Assets/Fonts/Bantayog_Baybayin/bantayogbaybayin-regular-webfont.woff')
+      format('woff'),
+    url('../Assets/Fonts/Bantayog/Bantayog-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Maragsa';
+  src: url('../Assets/Fonts/Maragasa/Maragsa-Display.woff') format('woff'),
+    url('../Assets/Fonts/Maragasa/Maragsâ-Display.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Baybayin-Sisi';
+  src: url('../Assets/Fonts/Bantayog_Baybayin/BAYBAYIN-SISI.ttf')
+    format('truetype');
+}
+
+:root {
+  --colorGold: #d18138;
+}
+html {
+  font-family: 'Bantayog-Regular';
+}
+body {
+  background-color: black;
+  overflow-x: hidden;
+}

@@ -1,0 +1,28 @@
+.location-height {
+  opacity: 0.5;
+  transition: 0.3s ease-in-out all;
+  z-index: -1;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  position: fixed;
+  top: 0px;
+}
+.location-container {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+.location-img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.5);
+}

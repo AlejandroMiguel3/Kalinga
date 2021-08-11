@@ -1,0 +1,11 @@
+.page-container {
+  height: 7000px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.sample-container {
+  height: 100vh;
+  background-color: red;
+}

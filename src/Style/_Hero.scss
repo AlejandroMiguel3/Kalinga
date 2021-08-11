@@ -1,0 +1,159 @@
+.letters:nth-child(1) {
+  --i: 1;
+}
+.letters:nth-child(2) {
+  --i: 2;
+}
+.letters:nth-child(3) {
+  --i: 3;
+}
+.letters:nth-child(4) {
+  --i: 4;
+}
+.letters:nth-child(5) {
+  --i: 5;
+}
+.letters:nth-child(6) {
+  --i: 6;
+}
+.letters:nth-child(7) {
+  --i: 7;
+}
+.letters:nth-child(8) {
+  --i: 8;
+}
+.letters:nth-child(9) {
+  --i: 9;
+}
+.letters:nth-child(10) {
+  --i: 10;
+}
+.letters:nth-child(11) {
+  --i: 11;
+}
+.letters:nth-child(12) {
+  --i: 12;
+}
+.letters:nth-child(13) {
+  --i: 13;
+}
+.letters:nth-child(14) {
+  --i: 14;
+}
+.letters:nth-child(15) {
+  --i: 15;
+}
+.letters:nth-child(16) {
+  --i: 16;
+}
+.letters:nth-child(17) {
+  --i: 17;
+}
+.letters:nth-child(18) {
+  --i: 18;
+}
+.letters:nth-child(19) {
+  --i: 19;
+}
+.letters:nth-child(20) {
+  --i: 20;
+}
+.letters:nth-child(21) {
+  --i: 21;
+}
+.letters:nth-child(22) {
+  --i: 22;
+}
+.letters:nth-child(23) {
+  --i: 23;
+}
+.letters:nth-child(24) {
+  --i: 24;
+}
+.letters:nth-child(25) {
+  --i: 25;
+}
+.letters:nth-child(26) {
+  --i: 26;
+}
+.letters:nth-child(27) {
+  --i: 27;
+}
+.letters:nth-child(28) {
+  --i: 28;
+}
+.letters:nth-child(29) {
+  --i: 29;
+}
+.letters:nth-child(30) {
+  --i: 30;
+}
+.letters:nth-child(31) {
+  --i: 31;
+}
+.letters:nth-child(32) {
+  --i: 32;
+}
+.letters:nth-child(33) {
+  --i: 33;
+}
+.letters:nth-child(34) {
+  --i: 34;
+}
+.letters:nth-child(35) {
+  --i: 35;
+}
+.letters:nth-child(36) {
+  --i: 36;
+}
+.letters:nth-child(37) {
+  --i: 37;
+}
+.hero-section {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  margin-bottom: -100.66px;
+}
+.profile {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background: url(../Assets/Whang-od.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.circle {
+  transform-style: preserve-3d;
+  animation: animateText 10s linear infinite;
+}
+.circle span {
+  position: absolute;
+  font-family: 'Maragsa';
+  top: 20vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: var(--colorGold);
+  font-size: 2rem;
+  transform-origin: top left;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * calc(360deg / 34))) translateZ(350px);
+}
+@keyframes animateText {
+  0% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(5deg)
+      translateY(-30px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(5deg) translateY(-30px);
+  }
+}

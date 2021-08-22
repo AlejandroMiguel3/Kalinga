@@ -5,9 +5,10 @@ import soundfile from '../../Assets/Sounds/bg-sound.mp3'
 const Music = () => {
   const [isEnter, setIsEnter] = useState(false)
   const [audio] = useState(new Audio(soundfile))
-  const [isToggle, setIsToggle] = useState(true)
+  const [isToggle, setIsToggle] = useState(false)
   const enterHandler = () => {
     setIsEnter(!isEnter)
+    setIsToggle(!isToggle)
   }
   const toggleHandler = () => {
     setIsToggle(!isToggle)

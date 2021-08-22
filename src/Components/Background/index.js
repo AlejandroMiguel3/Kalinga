@@ -41,8 +41,9 @@ const Location = () => {
     <section className='location-height'>
       <div className='location-container'>
         <img src={mapImg} className='location-img' alt='kalinga-map' />
-        <h1>hello Motherfather!!!!!</h1>
       </div>
+
+      <h1>○</h1>
     </section>
   )
 }
